@@ -1,4 +1,6 @@
-package com.jstevenunez.androidstarter.activity;
+package com.jstevenunez.androidstarter;
+
+import com.jstevenunez.androidstarter.activity.MainActivity;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,9 +16,10 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest = "src/main/AndroidManifest.xml", emulateSdk = 18)
-public class MainActivityTest {
+public class BaseTestCase {
     @Test
     public void testSomething() throws Exception {
         assertTrue(Robolectric.buildActivity(MainActivity.class).create().get() != null);
     }
+
 }
